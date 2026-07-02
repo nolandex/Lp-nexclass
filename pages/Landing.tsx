@@ -118,52 +118,16 @@ function PricingSection({ onNavigate }: { onNavigate: () => void }) {
     <div id="pricing" className="w-full max-w-md mx-auto relative px-4 pb-20 pt-8 bg-background transition-colors duration-300">
       <header className="mb-10 text-center relative px-2"><h2 className="text-[28px] font-bold tracking-tight text-foreground leading-tight">Daftar & <span className="text-indigo-500">Join Sekarang</span></h2></header>
       
-      <div className="relative rounded-[22px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.4)]">
-        {/* Gradient Background matching the clone */}
-        <div className="absolute inset-0 bg-[linear-gradient(145deg,#5c55e6_0%,#1a1554_40%,#050505_90%)]"></div>
-        {/* Additional subtle shine effect */}
-        <div className="absolute top-0 left-0 right-0 h-[40%] bg-gradient-to-b from-white/10 to-transparent pointer-events-none"></div>
-        
-        <div className="relative z-10 p-7">
-          <div className="font-bold text-2xl tracking-tighter mb-4">
-            <span className="text-white">NAIK</span><span className="text-indigo-300">LVL.</span>
-          </div>
-          <p className="text-white font-medium tracking-wide mb-6 uppercase text-[13px]">Akses Premium Selamanya</p>
-          
-          <div className="mb-1">
-            <span className="text-white/70 line-through text-[19px] font-medium tracking-wide">Rp999.000</span>
-          </div>
-          <div className="mb-8">
-            <span className="text-white text-5xl font-extrabold tracking-tight">RP99.000</span>
-          </div>
-          
-          <div className="space-y-4">
-            <div>
-              <label className="text-white/90 text-[11px] font-bold uppercase tracking-widest mb-2 flex items-center gap-1.5 ml-1">
-                <Tag size={12} />
-                Kode Promo
-              </label>
-              <div className="flex gap-2 h-[50px]">
-                <input 
-                  type="text" 
-                  placeholder="Masukkan kode..." 
-                  className="flex-1 bg-white/10 border border-white/20 rounded-xl px-4 text-white text-[15px] focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 transition-all placeholder:text-white/50 backdrop-blur-md" 
-                />
-                <button className="bg-transparent hover:bg-white/10 text-white text-sm font-bold uppercase tracking-wider px-6 rounded-xl border border-white/30 transition-colors backdrop-blur-md">
-                  Apply
-                </button>
-              </div>
+      <div className="p-[1.5px] rounded-3xl bg-[linear-gradient(135deg,#6366f1,rgba(0,0,0,0)_35%,#4f46e5_50%,rgba(0,0,0,0)_65%,#6366f1)] dark:bg-[linear-gradient(135deg,#6366f1,#171717_35%,#4f46e5_50%,#171717_65%,#6366f1)] shadow-[0_0_60px_5px_rgba(79,70,229,0.3)]">
+        <div className="relative bg-card rounded-[22.5px] overflow-hidden transition-colors duration-300">
+          <div className="p-6 relative z-10">
+            <div className="font-bold text-2xl tracking-tighter text-foreground mb-4">
+              <span>NAIK</span><span className="text-indigo-500">LVL.</span>
             </div>
-            <button 
-              onClick={onNavigate} 
-              className="w-full bg-[#5649ff] hover:bg-[#4338ca] text-white font-bold text-[17px] h-14 rounded-xl shadow-[0_4px_20px_rgba(86,73,255,0.4)] transition-all transform active:scale-[0.98] flex items-center justify-center gap-2 group mt-2"
-            >
-              <span>BAYAR SEKARANG</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <p className="text-center text-white/70 text-[11.5px] mt-2 pt-1 font-medium">
-              Akses otomatis terbuka setelah pembayaran berhasil
-            </p>
+            <p className="text-card-foreground text-sm font-medium tracking-wide mb-4 uppercase">Akses Premium Selamanya</p>
+            <div className="mb-1"><span className="text-destructive line-through text-lg font-medium">Rp999.000</span></div>
+            <div className="mb-6"><span className="text-foreground text-4xl font-extrabold tracking-tight">RP99.000</span></div>
+            <div className="space-y-4"><div><label className="text-muted-foreground text-[10px] font-bold uppercase tracking-widest mb-2 flex items-center gap-1.5 ml-1"><Tag size={10} />Kode Promo</label><div className="flex gap-2 h-11"><input type="text" placeholder="Masukkan kode..." className="flex-1 bg-muted border border-border rounded-xl px-4 text-foreground text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder:text-muted-foreground" /><button className="bg-card hover:bg-muted text-foreground text-xs font-bold uppercase tracking-wider px-5 rounded-xl border border-border transition-colors">Apply</button></div></div><button onClick={onNavigate} className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-lg h-14 rounded-xl shadow-[0_4px_20px_rgba(79,70,229,0.4)] transition-all transform active:scale-[0.98] flex items-center justify-center gap-2 group border-t border-white/10"><span>BAYAR SEKARANG</span><ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /></button><p className="text-center text-muted-foreground text-[10px]">Akses otomatis terbuka setelah pembayaran berhasil</p></div>
           </div>
         </div>
       </div>
