@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>NAIKLVL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Midtrans Snap.js Sandbox Script -->
+    <script type="text/javascript"
+      src="https://app.sandbox.midtrans.com/snap/snap.js"
+      data-client-key="SB-Mid-client-2Jja2G7bzxSbRvmC"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              background: 'var(--background)',
+              foreground: 'var(--foreground)',
+              primary: { 
+                DEFAULT: '#4f46e5', // Indigo 600
+                foreground: '#ffffff' 
+              },
+              muted: { 
+                DEFAULT: 'var(--muted)',
+                foreground: 'var(--muted-foreground)'
+              },
+              card: { 
+                DEFAULT: 'var(--card)',
+                foreground: 'var(--card-foreground)' 
+              },
+              border: 'var(--border)',
+              destructive: { DEFAULT: '#ef4444', foreground: '#ffffff' },
+              'crypto-indigo': '#4f46e5', // Indigo 600
+              'crypto-red': '#ef4444',
+              'crypto-card': '#0f0f0f' 
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        .dark {
+          --background: #000000;
+          --foreground: #ffffff;
+          --card: #0a0a0a;
+          --card-foreground: #ffffff;
+          --muted: #171717;
+          --muted-foreground: #a3a3a3;
+          --border: #262626;
+        }
+        body { 
+          background-color: var(--background); 
+          color: var(--foreground); 
+          -webkit-font-smoothing: antialiased; 
+          overflow-x: hidden; 
+        }
+      }
+      .scrollbar-hide::-webkit-scrollbar { display: none; }
+      .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0",
+    "react-dom/client": "https://esm.sh/react-dom@^19.2.3/client",
+    "react-dom": "https://esm.sh/react-dom@^19.2.3",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
